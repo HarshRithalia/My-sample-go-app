@@ -21,5 +21,8 @@ jobs:
         name: Run tests
         run: |
           go test -v ./...
-      - uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v1
-        name: Scan with SonarQube bundled action
+      - uses: cloudbees-io/sonarqube-bundled-sast-scan-code@v2
+        name: scan
+        kind: scan
+        with:
+          language: LANGUAGE_JAVA
